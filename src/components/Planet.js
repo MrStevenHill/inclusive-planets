@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const PlanetContainer = styled.div`
   display: flex;
@@ -25,6 +26,11 @@ const DottedLine = styled.div`
   border-left: 3px dotted;
 `;
 
+const propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
+};
+
 const Planet = ({ name, image }) => (
   <PlanetContainer>
     <PlanetImage src={image} />
@@ -32,5 +38,7 @@ const Planet = ({ name, image }) => (
     <PlanetLabel>{name}</PlanetLabel>
   </PlanetContainer>
 );
+
+Planet.propTypes = propTypes;
 
 export default Planet;
