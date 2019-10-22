@@ -25,6 +25,11 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: ${themeSettings.color.secondary};
   }
+  h1 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 2.5em;
+  }
 `;
 
 const Theme = ({ children }) => (
