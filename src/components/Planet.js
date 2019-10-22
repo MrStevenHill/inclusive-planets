@@ -5,6 +5,7 @@ const PlanetContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 40px;
 `;
 
 const PlanetImage = styled.img`
@@ -24,9 +25,9 @@ const DottedLine = styled.div`
   border-left: 3px dotted;
 `;
 
-const Planet = ({ name }) => (
+const Planet = ({ name, image }) => (
   <PlanetContainer>
-    <PlanetImage src="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572905/Inclusive/planets/mercury.png" />
+    <PlanetImage src={image} />
     <DottedLine />
     <PlanetLabel>{name}</PlanetLabel>
   </PlanetContainer>

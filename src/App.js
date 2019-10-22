@@ -15,6 +15,7 @@ const SolarSystem = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 30px;
 `;
 
@@ -24,14 +25,38 @@ function App() {
       <Title>THE SOLAR SYSTEM</Title>
       <SolarSystem>
         <Sun />
-        <Planet name="Mercury" />
-        <Planet name="Venus" />
-        <Planet name="Earth" />
-        <Planet name="Mars" />
-        <Planet name="Jupiter" />
-        <Planet name="Saturn" />
-        <Planet name="Uranus" />
-        <Planet name="Neptune" />
+        <Planet
+          name="Mercury"
+          image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572905/Inclusive/planets/mercury.png"
+        />
+        <Planet
+          name="Venus"
+          image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572906/Inclusive/planets/venus.png"
+        />
+        <Planet
+          name="Earth"
+          image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572906/Inclusive/planets/earth.png"
+        />
+        <Planet
+          name="Mars"
+          image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572906/Inclusive/planets/mars.png"
+        />
+        <Planet
+          name="Jupiter"
+          image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572906/Inclusive/planets/jupiter.png"
+        />
+        <Planet
+          name="Saturn"
+          image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572906/Inclusive/planets/saturn.png"
+        />
+        <Planet
+          name="Uranus"
+          image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572907/Inclusive/planets/uranus.png"
+        />
+        <Planet
+          name="Neptune"
+          image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572906/Inclusive/planets/neptune.png"
+        />
       </SolarSystem>
       <Footer>&copy; 2019 - MrStevenHill</Footer>
     </AppContainer>
