@@ -1,37 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 
-import Planet from "./Planet";
-import Footer from "./Footer";
+import Title from "./components/Title";
+import Sun from "./components/Sun";
+import Planet from "./components/Planet";
+import Footer from "./components/Footer";
 
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-const PageTitle = styled.h1`
-  margin-left: auto;
-  margin-top: 50px;
-  padding-bottom: 10px;
-  padding-right: 100px;
-  border-bottom: 4px dotted;
-  margin-bottom: 25px;
-`;
-
 const SolarSystem = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 30px;
 `;
-
-const Sun = styled.div``;
 
 function App() {
   return (
     <AppContainer>
-      <PageTitle>THE SOLAR SYSTEM</PageTitle>
+      <Title>THE SOLAR SYSTEM</Title>
       <SolarSystem>
-        <Sun>Sun</Sun>
+        <Sun />
         <Planet name="Mercury" />
         <Planet name="Venus" />
         <Planet name="Earth" />
