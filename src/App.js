@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Title from "./components/Title";
 import Sun from "./components/Sun";
 import Planet from "./components/Planet";
+import PlanetDetails from "./components/PlanetDetails";
 import Footer from "./components/Footer";
 
 const AppContainer = styled.div`
@@ -58,6 +59,15 @@ function App() {
           image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572906/Inclusive/planets/neptune.png"
         />
       </SolarSystem>
+
+      <PlanetDetails
+        name="Mercury"
+        image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572999/Inclusive/planets-real/mercury.jpg"
+        distance="57,909,175"
+        mass="3.302×10^23"
+        diameter="4,879.28"
+      />
+
       <Footer>&copy; 2019 - MrStevenHill</Footer>
     </AppContainer>
   );
