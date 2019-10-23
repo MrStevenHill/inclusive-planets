@@ -14,6 +14,7 @@ const PlanetImage = styled.img`
   transition-timing-function: ease-in-out;
   :hover {
     transform: scale(1.2);
+    cursor: pointer;
   }
 `;
 
@@ -31,9 +32,9 @@ const propTypes = {
   image: PropTypes.string.isRequired
 };
 
-const Planet = ({ name, image }) => (
+const Planet = ({ name, image, onPlanetClick }) => (
   <PlanetContainer>
-    <PlanetImage src={image} />
+    <PlanetImage src={image} onClick={onPlanetClick} />
     <DottedLine />
     <PlanetLabel>{name}</PlanetLabel>
   </PlanetContainer>
