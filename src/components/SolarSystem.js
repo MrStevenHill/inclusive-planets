@@ -18,9 +18,9 @@ const propTypes = {
   planetData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-      realImage: PropTypes.string.isRequired,
-      distance: PropTypes.string.isRequired,
+      imageUrl: PropTypes.string.isRequired,
+      realImageUrl: PropTypes.string.isRequired,
+      distanceFromSun: PropTypes.string.isRequired,
       mass: PropTypes.string.isRequired,
       diameter: PropTypes.string.isRequired
     })
@@ -28,13 +28,13 @@ const propTypes = {
 };
 
 const SolarSystem = ({ planetData }) => {
-  const [showPlanet, setShowPlanet] = useState("");
+  const [showPlanet, setShowPlanet] = useState("[]");
 
   const planets = planetData.map(planet => (
     <Planet
       key={planet.name}
       name={planet.name}
-      image={planet.image}
+      image={planet.imageUrl}
       onClick={() => setShowPlanet(planet.name)}
     />
   ));
@@ -43,8 +43,8 @@ const SolarSystem = ({ planetData }) => {
     <PlanetDetails
       key={planet.name}
       name={planet.name}
-      image={planet.realImage}
-      distance={planet.distance}
+      image={planet.realImageUrl}
+      distance={planet.distanceFromSun}
       mass={planet.mass}
       diameter={planet.diameter}
       visible={planet.name === showPlanet}
