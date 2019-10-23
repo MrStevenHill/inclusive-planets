@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import Planet from "./Planet";
 import Sun from "./Sun";
+import Planet from "./Planet";
+import PlanetDetails from "./PlanetDetails";
 
 const Container = styled.div`
   display: flex;
@@ -27,27 +28,38 @@ const propTypes = {
 };
 
 const SolarSystem = ({ planetData }) => {
+  const [showPlanet, setShowPlanet] = useState("");
+
   const planets = planetData.map(planet => (
-    <Planet name={planet.name} image={planet.image} />
+    <Planet
+      key={planet.name}
+      name={planet.name}
+      image={planet.image}
+      onClick={() => setShowPlanet(planet.name)}
+    />
+  ));
+
+  const planetDetails = planetData.map(planet => (
+    <PlanetDetails
+      key={planet.name}
+      name={planet.name}
+      image={planet.realImage}
+      distance={planet.distance}
+      mass={planet.mass}
+      diameter={planet.diameter}
+      visible={planet.name === showPlanet}
+      onClose={() => setShowPlanet("")}
+    />
   ));
 
   return (
     <Container>
       <Sun />
       {planets}
+      {planetDetails}
     </Container>
   );
 };
-
-{
-  /* <PlanetDetails
-    name="Mercury"
-    image="https://res.cloudinary.com/mrstevenhill/image/upload/v1571572999/Inclusive/planets-real/mercury.jpg"
-    distance="57,909,175"
-    mass="3.302×10^23"
-    diameter="4,879.28"
-  /> */
-}
 
 SolarSystem.propTypes = propTypes;
 

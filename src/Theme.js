@@ -12,10 +12,10 @@ const themeSettings = {
 const GlobalStyles = createGlobalStyle`
   body {
     @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
-    font-family: ${themeSettings.font};
+    font-family: ${({ theme }) => theme.font};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: ${themeSettings.color.primary};
+    color: ${({ theme }) => theme.color.primary};
     background: linear-gradient(-45deg, #00222C, #475B64);
     padding: 0;
     margin: 0;
@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
-    color: ${themeSettings.color.secondary};
+    color: ${({ theme }) => theme.color.secondary};
   }
   h1 {
     font-weight: 500;

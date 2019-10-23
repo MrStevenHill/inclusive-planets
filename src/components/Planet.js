@@ -29,12 +29,13 @@ const DottedLine = styled.div`
 
 const propTypes = {
   name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
+  image: PropTypes.string.isRequired,
+  onClick: PropTypes.func
 };
 
-const Planet = ({ name, image, onPlanetClick }) => (
+const Planet = ({ name, image, onClick }) => (
   <PlanetContainer>
-    <PlanetImage src={image} onClick={onPlanetClick} />
+    <PlanetImage src={image} onClick={onClick} />
     <DottedLine />
     <PlanetLabel>{name}</PlanetLabel>
   </PlanetContainer>
