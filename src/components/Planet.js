@@ -16,6 +16,9 @@ const PlanetImage = styled.img`
     transform: scale(1.2);
     cursor: pointer;
   }
+  @media (max-width: 600px) {
+    vertical-align: initial;
+  }
 `;
 
 const PlanetLabel = styled.div``;
@@ -25,6 +28,9 @@ const DottedLine = styled.div`
   height: 100px;
   margin-top: 6px;
   border-left: 3px dotted;
+  @media (max-width: 600px) {
+    height: 0px;
+  }
 `;
 
 const propTypes = {

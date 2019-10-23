@@ -20,6 +20,11 @@ const Panel = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 5px dotted;
+  img {
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
 `;
 
 const Detail = styled.div`

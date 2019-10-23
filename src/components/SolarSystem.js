@@ -12,6 +12,11 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 30px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    padding: unset;
+    flex-wrap: unset;
+  }
 `;
 
 const propTypes = {

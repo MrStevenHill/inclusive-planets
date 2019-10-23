@@ -7,6 +7,7 @@ import SolarSystem from "./components/SolarSystem";
 import Footer from "./components/Footer";
 
 const AppContainer = styled.div`
+  padding: 15px;
   display: flex;
   flex-direction: column;
 `;

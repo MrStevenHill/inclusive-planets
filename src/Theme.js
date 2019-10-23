@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
     background: linear-gradient(-45deg, #00222C, #475B64);
     padding: 0;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
   }
   a {
     text-decoration: none;
