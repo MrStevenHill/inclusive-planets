@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const Overlay = styled.div`
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background: linear-gradient(-45deg, #00222c, #475b64);
